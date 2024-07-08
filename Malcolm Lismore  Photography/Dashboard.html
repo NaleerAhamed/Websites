@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malcolm Lismore Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="icon" href="Admin/Images/camera-svgrepo-com.svg">
+    <style>
+        /* Custom styles */
+        .hidden {
+            display: none;
+        }
+
+        .btn-custom-primary {
+            background-color: #6c5ce7;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom-primary:hover {
+            background-color: #4834d4;
+        }
+
+        .btn-custom-secondary {
+            background-color: #ff7675;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom-secondary:hover {
+            background-color: #d63031;
+        }
+
+        .btn-logout {
+            background-color: #e17055;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-logout:hover {
+            background-color: #d35400;
+        }
+
+        body {
+            background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(210, 30, 197, 1) 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Admin Dashboard</h1>
+        <button class="btn btn-logout mt-3 mb-4" onclick="logout()">Logout</button>
+        <ul class="nav nav-tabs" id="adminTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="view-tab" data-bs-toggle="tab" data-bs-target="#view" type="button" role="tab">View Images</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="add-tab" data-bs-toggle="tab" data-bs-target="#add" type="button" role="tab">Add Image</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="edit-tab" data-bs-toggle="tab" data-bs-target="#edit" type="button" role="tab">Edit Image</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="delete-tab" data-bs-toggle="tab" data-bs-target="#delete" type="button" role="tab">Delete Image</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="adminTabsContent">
+            <!-- View Images Tab -->
+            <div class="tab-pane fade show active" id="view" role="tabpanel">
+                <div id="imageList" class="row mt-3">
+                    <!-- Dynamically loaded images will be inserted here -->
+                </div>
+            </div>
+            <!-- Add Image Tab -->
+            <div class="tab-pane fade" id="add" role="tabpanel">
+                <form id="addImageForm" class="mt-3" action="upload.php" enctype="multipart/form-data" method="POST">
+                    <div class="mb-3">
+                        <label for="addImageName" class="form-label">Image Name</label>
+                        <input type="text" class="form-control" name="name" id="addImageName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addImageFile" class="form-label">Choose Image or Video</label>
+                        <input type="file" class="form-control" name="file" id="addImageFile" accept="image/*,video/*" required>
+                    </div>
+                    <button type="submit" class="btn btn-custom-primary">Add Image/Video</button>
+                </form>
+            </div>
+            <!-- Edit Image Tab -->
+            <div class="tab-pane fade" id="edit" role="tabpanel">
+                <!-- Edit functionality can be implemented here -->
+            </div>
+            <!-- Delete Image Tab -->
+            <div class="tab-pane fade" id="delete" role="tabpanel">
+                <div id="deleteImageList" class="row mt-3">
+                    <!-- Dynamically loaded images will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions can be added here for image handling
+        function logout() {
+            localStorage.removeItem('user');
+            window.location.href = 'index.html';
+        }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

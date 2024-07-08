@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Favicon link -->
+    <link rel="icon" href="Images/camera-svgrepo-com.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome script -->
+    <script src="https://kit.fontawesome.com/c0a1434f10.js" crossorigin="anonymous"></script>
+    <!-- jQuery script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Title -->
+    <title>Malcolm Lismore Photography</title>
+    <style>
+        footer {
+            background: darkblue;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        footer a {
+            color: red;
+        }
+
+        .home {
+            display: flex;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/pexels-kratz-1363876.jpg) no-repeat center;
+            height: 100vh;
+            min-height: 600px;
+            background-size: cover;
+        }
+
+        .home .max-width {
+            text-align: center;
+        }
+
+        .home a.center-text {
+            font-size: 35px;
+            /* Adjust font size as needed */
+            text-decoration: none;
+            /* Remove underline */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <div class="navbar">
+        <div class="max-width">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Malcolm Lismore Photography</span>
+                </a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="live.html">Live streaming</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="max-width">
+            <a href="#" class="center-text">Contact us right now for expert photography services!!!</a>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="Contact">
+        <h2 class="title">Contact Us</h2>
+        <div class="max-width">
+            <div class="card">
+                <div class="left">
+                    <div class="address">
+                        <h3>Location Address</h3>
+                        <p>Kandy, Srilanka</p>
+                    </div>
+                    <div class="address">
+                        <h3>Email Address</h3>
+                        <a href="mailto:Naleerahamed@gmail.com">Naleerahamed@gmail.com</a>
+                    </div>
+                    <div class="address">
+                        <h3>Contact Us 24/7</h3>
+                        <p>+94 076 693 2549</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63320.418063613644!2d80.58458128010453!3d7.294628573375471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366266498acd3%3A0x411a3818a1e03c35!2sKandy!5e0!3m2!1sen!2slk!4v1717609844857!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form section -->
+    <section class="Contact">
+        <h2 class="title">Text Us</h2>
+        <div class="max-width">
+            <form id="contact-form" action="function.php" role="form" method="POST">
+                <div class="input-group">
+                    <input type="text" name="firstname" placeholder="First Name" required>
+                    <input type="text" name="lastname" placeholder="Last Name" required>
+                </div>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <select name="service" required>
+                    <option value="" disabled selected>Select Event Type</option>
+                    <option value="wedding">Wedding Photography</option>
+                    <option value="portrait">Portrait Photography</option>
+                    <option value="event">Event Photography</option>
+                    <option value="birthday">Birthday Event Photography</option>
+                    <option value="commercial">Commercial Photography</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="date" name="date" placeholder="Preferred Date" required>
+                <input type="text" name="location" placeholder="Location" required>
+                <textarea name="details" cols="30" rows="5" placeholder="Describe your project details" required></textarea>
+                <input type="submit" value="Submit Here" class="btn btn-danger">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <span>Designed by <a href="#">Naleer Ahamed</a> &copy; 2024. All rights reserved.</span>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                // If we need scrollbar (optional)
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>

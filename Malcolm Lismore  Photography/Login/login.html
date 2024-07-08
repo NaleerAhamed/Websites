@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malcolm Lismore Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" href="../Images/camera-svgrepo-com.svg">
+    <style>
+        .background-radial-gradient {
+            background-color: hsl(218, 41%, 15%);
+            background-image: radial-gradient(650px circle at 0% 0%, hsl(218, 41%, 35%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%), radial-gradient(1250px circle at 100% 100%, hsl(218, 41%, 45%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%);
+        }
+
+        #radius-shape-1 {
+            height: 220px;
+            width: 220px;
+            top: -60px;
+            left: -130px;
+            background: radial-gradient(#44006b, #ad1fff);
+            overflow: hidden;
+        }
+
+        #radius-shape-2 {
+            border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+            bottom: -60px;
+            right: -110px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(#44006b, #ad1fff);
+            overflow: hidden;
+        }
+
+        .bg-glass {
+            background-color: hsla(0, 0%, 100%, 0.9) !important;
+            backdrop-filter: saturate(200%) blur(25px);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .animate-content {
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+                color: #007bff;
+                /* Starting color */
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                color: #28a745;
+                /* Ending color */
+            }
+        }
+
+        .btn-custom {
+            width: 200px;
+            /* Increase button width */
+            border-radius: 50px;
+            padding: 15px 30px;
+            /* Increase button padding */
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-block {
+            width: 100%;
+            /* Ensure the buttons take full width */
+        }
+
+        .btn-block.btn-secondary {
+            margin-top: 10px;
+            /* Adjust alignment of the "Back" button */
+        }
+
+        .card-body .btn-floating {
+            margin-right: 10px;
+            /* Adjust alignment of the social login buttons */
+        }
+
+        /* Button color styles */
+        .btn-custom {
+            width: 200px;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Using cubic-bezier for smoother transition */
+        }
+
+        .btn-custom-primary {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-custom-primary:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        .btn-custom-secondary {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .btn-custom-secondary:hover {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .password-container input[type="password"],
+        .password-container input[type="text"] {
+            padding-right: 40px;
+        }
+
+        .password-container .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Section: Design Block -->
+    <section class="background-radial-gradient overflow-hidden">
+        <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+            <div class="row gx-lg-5 align-items-center mb-5">
+                <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                    <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                        Welcome <br> To Malcolm Lismore Photography <br />
+                        <span style="color: hsl(218, 81%, 75%)">Capture your moments</span>
+                    </h1>
+                    <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                        Malcolm Lismore Photography is dedicated to immortalizing your special moments with precision and artistry.
+                        Our services cover a wide range of photography needs, ensuring that every shot is a masterpiece. Whether it's a wedding,
+                        a corporate event, a family portrait, or any other significant occasion, we bring a creative and professional approach to
+                        capturing your memories. Our team uses state-of-the-art equipment and techniques to produce stunning visuals that tell your
+                        story. We are passionate about our craft and strive to provide our clients with an exceptional photography experience from
+                        start to finish. Trust Malcolm Lismore Photography to turn your moments into timeless works of art.
+                    </p>
+                </div>
+
+                <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                    <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                    <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+                    <div class="card bg-glass">
+                        <div class="card-body px-4 py-5 px-md-5 text-center">
+                            <!-- Initial buttons -->
+                            <div id="initialButtons">
+                                <p class="mb-4">Already a member? <button type="button"
+                                        class="btn btn-custom btn-custom-primary btn-lg"
+                                        onclick="showForm('login')">Sign in</button></p>
+                                <p class="mb-4">Not a member yet? <button type="button"
+                                        class="btn btn-custom btn-custom-secondary btn-lg"
+                                        onclick="showForm('register')">Register</button></p>
+                            </div>
+
+                            <!-- Login form -->
+                            <div id="loginFormContainer" class="hidden animate-content">
+                                <form id="loginForm" action="login.php" method="POST">
+                                    <div id="loginSuccessMessage" class="mb-4 text-success hidden"></div>
+                                    <div class="text-center mb-3">
+                                        <p>Sign in with:</p>
+                                        <button type="button" class="btn btn-link btn-floating mx-1"
+                                            onclick="signInWith('facebook')">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1"
+                                            onclick="signInWith('google')">
+                                            <i class="fab fa-google"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1"
+                                            onclick="signInWith('twitter')">
+                                            <i class="fab fa-twitter"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1"
+                                            onclick="signInWith('github')">
+                                            <i class="fab fa-github"></i>
+                                        </button>
+                                    </div>
+
+                                    <p class="text-center">or:</p>
+
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="loginName" name="loginName" class="form-control"
+                                            placeholder="Email or username" required />
+                                    </div>
+
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-4 password-container">
+                                        <input type="password" id="loginPassword" name="loginPassword" class="form-control"
+                                            placeholder="Password" required />
+                                        <i class="fa fa-eye toggle-password" onclick="togglePassword('loginPassword', this)"></i>
+                                    </div>
+
+                                    <!-- 2 column grid layout for inline styling -->
+                                    <div class="row mb-4">
+                                        <div class="col-md-6 d-flex justify-content-center">
+                                            <!-- Checkbox -->
+                                            <div class="form-check mb-3 mb-md-0">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="loginCheck" />
+                                                <label class="form-check-label" for="loginCheck"> Remember me
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 d-flex justify-content-center">
+                                            <!-- Simple link -->
+                                            <a href="#!" onclick="forgotPassword()">Forgot password?</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                                    <!-- Back button -->
+                                    <button type="button" class="btn btn-secondary btn-block"
+                                        onclick="goBack('initialButtons')">Back</button>
+                                </form>
+                            </div>
+
+                            <!-- Register form -->
+                            <div id="registerFormContainer" class="hidden animate-content">
+                                <!--Database connection-->
+                                <form id="registerForm" action="register.php" method="POST">
+                                    <div id="registerSuccessMessage" class="mb-4 text-success hidden"></div>
+                                    <div class="text-center mb-3">
+                                        <p>Sign up with:</p>
+                                        <button type="button" class="btn btn-link btn-floating mx-1"
+                                            onclick="signUpWith('facebook')">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1"
+                                            onclick="signUpWith('google')">
+                                            <i class="fab fa-google"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1"
+                                            onclick="signUpWith('twitter')">
+                                            <i class="fab fa-twitter"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1"
+                                            onclick="signUpWith('github')">
+                                            <i class="fab fa-github"></i>
+                                        </button>
+                                    </div>
+
+                                    <p class="text-center">or:</p>
+
+                                    <!-- Name input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="registerUsername" name="registerUsername" class="form-control"
+                                            placeholder="Username" required />
+                                    </div>
+
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="registerEmail" name="registerEmail" class="form-control" placeholder="Email"
+                                            required />
+                                    </div>
+
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-4 password-container">
+                                        <input type="password" id="registerPassword" name="registerPassword" class="form-control"
+                                            placeholder="Password" required />
+                                        <i class="fa fa-eye toggle-password" onclick="togglePassword('registerPassword', this)"></i>
+                                    </div>
+
+                                    <!-- Repeat Password input -->
+                                    <div class="form-outline mb-4 password-container">
+                                        <input type="password" id="registerRepeatPassword" name="registerRepeatPassword" class="form-control"
+                                            placeholder="Repeat password" required />
+                                        <i class="fa fa-eye toggle-password" onclick="togglePassword('registerRepeatPassword', this)"></i>
+                                    </div>
+
+                                    <!-- Checkbox -->
+                                    <div class="form-check d-flex justify-content-center mb-4">
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck"
+                                            required />
+                                        <label class="form-check-label" for="registerCheck">
+                                            I have read and agree to the terms
+                                        </label>
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+
+                                    <!-- Back button -->
+                                    <button type="button" class="btn btn-secondary btn-block"
+                                        onclick="goBack('initialButtons')">Back</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showForm(formName) {
+            document.getElementById('initialButtons').classList.add('hidden');
+            document.getElementById(formName + 'FormContainer').classList.remove('hidden');
+        }
+
+        function goBack(containerId) {
+            document.getElementById(containerId).classList.remove('hidden');
+            document.getElementById('loginFormContainer').classList.add('hidden');
+            document.getElementById('registerFormContainer').classList.add('hidden');
+            clearMessages();
+            clearFormInputs();
+        }
+
+        function signInWith(provider) {
+            alert('Signing in with ' + provider);
+        }
+
+        function signUpWith(provider) {
+            alert('Signing up with ' + provider);
+        }
+
+        function forgotPassword() {
+            alert('Forgot password functionality coming soon!');
+        }
+
+        function togglePassword(inputId, element) {
+            var passwordInput = document.getElementById(inputId);
+            var icon = element;
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            // Simulate login success
+            document.getElementById('loginSuccessMessage').innerText = 'Login successful!';
+            document.getElementById('loginSuccessMessage').classList.remove('hidden');
+            clearFormInputs();
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            // Simulate registration success
+            document.getElementById('registerSuccessMessage').innerText = 'Registration successful!';
+            document.getElementById('registerSuccessMessage').classList.remove('hidden');
+            clearFormInputs();
+        }
+
+        function clearMessages() {
+            document.getElementById('loginSuccessMessage').classList.add('hidden');
+            document.getElementById('registerSuccessMessage').classList.add('hidden');
+        }
+
+        function clearFormInputs() {
+            document.getElementById('loginForm').reset();
+            document.getElementById('registerForm').reset();
+        }
+    </script>
+</body>
+
+</html>

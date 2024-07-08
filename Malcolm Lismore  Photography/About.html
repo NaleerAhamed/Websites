@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Favicon link -->
+    <link rel="icon" href="Images/camera-svgrepo-com.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome script -->
+    <script src="https://kit.fontawesome.com/c0a1434f10.js" crossorigin="anonymous"></script>
+    <!-- jQuery script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Title -->
+    <title>Malcolm Lismore Photography</title>
+    <style>
+        footer {
+            background: darkblue;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        footer a {
+            color: red;
+        }
+
+        .home {
+            display: flex;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/alif-ngoylung-jg-6ARMiaPM-unsplash.jpg) no-repeat center;
+            height: 100vh;
+            min-height: 600px;
+            background-size: cover;
+        }
+
+        /* Price list section styles */
+        .price-list {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .price-list h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+        
+        .price-list ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .price-list ul li {
+            font-size: 1.2rem;
+            margin: 10px;
+            padding: 15px 25px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .price-list ul li:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <div class="navbar">
+        <div class="max-width">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Malcolm Lismore Photography</span>
+                </a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Gallary.html">Gallery</a></li>
+                <li><a href="live.html">Live streaming</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="max-width">
+            <a href="#">Get To Know About Photographers Now !!!</a>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="About">
+        <h2 class="title">Get to Know About Our Services</h2>
+        <div class="max-width">
+            <div class="card">
+                <div class="left">
+                    <img src="Images/why us.jpg" alt="Why Us Image ">
+                </div>
+                <div class="right">
+                    <h3>Services</h3>
+                    <p>Our web development services encompass a comprehensive range of solutions designed to bring your
+                        digital vision to life. From initial concept and strategy to full-scale implementation and
+                        maintenance, our team of expert developers is equipped to handle projects of all sizes and
+                        complexities. We specialize in creating responsive, user-friendly websites that are tailored to
+                        meet your unique business needs. Utilizing the latest technologies and best practices, we ensure
+                        that your website not only looks great but also performs optimally across all devices and
+                        platforms. Whether you need a dynamic e-commerce site, a robust content management system, or a
+                        sleek portfolio website, we deliver innovative and scalable solutions that drive engagement and
+                        growth. Partner with us to enhance your online presence and achieve your business objectives
+                        with a website that stands out in today's competitive digital landscape.</p>
+                    <a href="#">Book Our Services &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <h2 class="title">Latest Photoshoot</h2>
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="Images/Graduation 1.jpg" alt="Graduation Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Wedding 1.jpg.jpg" alt="Wedding Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Natural 1.jpg.jpg" alt="Natural Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Graduation 2.jpg" alt="Graduation Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Wedding 2.jpg.jpg" alt="Wedding Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Natural 2.jpg.jpg" alt="Natural Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Wildlife 3.jpg" alt="Wildlife Image ">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Wildlife 5.jpg" alt="Natural Image ">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Wildlife 6.jpg" alt="Natural Image ">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Graduation 5.jpg" alt="Natural Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Graduation 7.jpg" alt="Natural Image 2">
+                    </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Price List Section -->
+    <section class="price-list">
+        <div class="max-width">
+            <h2>Price List for Photoshoots</h2><hr>
+            <ul>
+                <li>Wedding Photoshoot: $1000</li>
+                <li>Graduation Photoshoot: $500</li>
+                <li>Birthday Photoshoot: $300</li>
+                <li>Natural Photography Session: $300</li>
+                <li>Wildlife Photography: $700</li>
+                <li>Portrait Photography: $400</li>
+                <!-- Add more items as needed -->
+            </ul>
+        </div>
+    </section>
+     <!-- Price List Section End-->
+
+    <!-- Footer section -->
+    <footer>
+        <span>Designed by <a href="#">Naleer Ahamed</a> &copy; 2024. All rights reserved.</span>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // If we need scrollbar (optional)
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
